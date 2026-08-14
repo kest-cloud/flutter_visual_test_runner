@@ -1,9 +1,9 @@
 name: flutter_visual_test_runner
 description: "In-app visual test runner dashboard for Flutter apps with live highlights, gesture simulation, natural language DSL, and report generation."
-version: 1.0.0
-homepage: https://github.com/flutter-visual-test-runner/flutter_visual_test_runner
-repository: https://github.com/flutter-visual-test-runner/flutter_visual_test_runner
-issue_tracker: https://github.com/flutter-visual-test-runner/flutter_visual_test_runner/issues
+version: 1.0.1
+homepage: https://github.com/kest-cloud/flutter_visual_test_runner
+repository: https://github.com/kest-cloud/flutter_visual_test_runner
+issue_tracker: https://github.com/kest-cloud/flutter_visual_test_runner/issues
 
 topics:
   - testing

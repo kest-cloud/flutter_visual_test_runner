@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.1
+
+* Updated repository, homepage, and issue tracker URLs to point to GitHub.
+
 ## 1.0.0
 
 * **Initial Stable Release** of `flutter_visual_test_runner`.
