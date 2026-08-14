@@ -1,0 +1,39 @@
+# Scenario: Authentication & Credential Verification @smoke @auth
+
+## Test: test empty phone validation
+- Tap "Sign In"
+- Expect "Phone number is required" to be visible
+
+## Test: test short phone number validation
+- Enter "123" into phone_input
+- Tap "Sign In"
+- Expect "Phone number must be at least 10 digits" to be visible
+
+## Test: test missing password validation
+- Enter "08012345678" into phone_input
+- Tap "Sign In"
+- Expect "Password is required" to be visible
+
+## Test: test successful sign in with valid credentials
+- Enter "08012345678" into phone_input
+- Enter "Secret123" into password_input
+- Tap "Sign In"
+- Expect "Store Dashboard" to be visible
+- Expect "Welcome back, Alex!" to be visible
+
+# Scenario: Store Catalog & Cart Interactions @catalog
+
+## Test: verify store dashboard metrics and product catalog
+- Expect "Store Dashboard" to be visible
+- Expect "Revenue" to be visible
+- Expect "Product Catalog" to be visible
+- Expect "Product Item #1" to be visible
+
+## Test: add products to cart and verify cart badge
+- Tap "add_btn_1"
+- Expect "Added ✓" to be visible
+- Expect "cart_badge" to be visible
+- Tap "add_btn_2"
+- Expect "cart_badge" to be visible
+
+

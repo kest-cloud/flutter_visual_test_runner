@@ -1,0 +1,44 @@
+name: "E-Commerce App Visual Suite"
+defaultTimeoutMs: 5000
+autoScrollToTarget: true
+adaptiveWait: true
+scenarios:
+  - name: "Authentication Flow"
+    tags: ["@smoke", "@auth"]
+    cases:
+      - name: "Validate Phone Length"
+        steps:
+          - type: "enterText"
+            target:
+              type: "byKey"
+              value: "phone_input"
+            text: "123"
+          - type: "tap"
+            target:
+              type: "byKey"
+              value: "login_btn"
+          - type: "expectVisible"
+            target:
+              type: "byText"
+              value: "Phone number must be at least 10 digits"
+
+      - name: "Successful Authentication"
+        steps:
+          - type: "enterText"
+            target:
+              type: "byKey"
+              value: "phone_input"
+            text: "08012345678"
+          - type: "enterText"
+            target:
+              type: "byKey"
+              value: "password_input"
+            text: "Pass1234!"
+          - type: "tap"
+            target:
+              type: "byKey"
+              value: "login_btn"
+          - type: "expectVisible"
+            target:
+              type: "byText"
+              value: "Store Dashboard"
